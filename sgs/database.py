@@ -47,7 +47,7 @@ def load_local() -> Optional[TinyDB]:
 
 
 def update_db() -> Optional[TinyDB]:
-    files = GhcrProvider().pull(target='hnzlmnn/semgrep-search-db:latest')
+    files = GhcrProvider().pull(target='cryptoluks/semgrep-search-db:latest')
     for file in files:
         path = Path(file)
         if path.name == DB_FILENAME:
